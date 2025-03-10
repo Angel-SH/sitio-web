@@ -264,6 +264,7 @@ body {
 }
 
 body::before {
+    
     content: '';
     position: absolute;
     top: 0;
@@ -596,364 +597,338 @@ h3 {
 }
 
 /* aqui */
-.pagina-contenedor {
+.container {
     display: flex;
-    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    gap: 2rem;
     align-items: center;
-    min-height: 100vh;
-    background-color: #00624a;
-    background-image: linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
-                      linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
-    
-    padding: 0 3%;
+    position: relative;
+    background-color: #024b3d; /* Color verde */
+    background-image: url('/mnt/data/image.png'); /* Añadir la imagen como fondo */
+    background-repeat: no-repeat; /* Evitar que se repita la imagen */
+    background-size: cover; /* Ajustar el tamaño de la imagen */
 }
 
-/* Sección izquierda con título y descripción - div id="seccion-izquierda" */
-.contenido-izquierda {
-    max-width: 550px;
-    color: white;
+.container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: repeating-radial-gradient(
+        circle at 0 0,
+        rgba(255, 255, 255, 0.05) 0,
+        rgba(255, 255, 255, 0.05) 2px,
+        transparent 2px,
+        transparent 100px
+    );
+    z-index: -1; /* Asegura que el fondo no cubra el contenido */
+}
+
+/* Sección izquierda con texto promocional */
+.promo-section {
     flex: 1;
-    padding-right: 30px;
+    max-width: 500px;
+    padding-right: 2rem;
 }
 
-/* Título principal - div id="encabezado-principal" */
-.titulo-principal h1 {
+.promo-section h1 {
     font-size: 3.5rem;
     font-weight: 700;
+    line-height: 1.1;
     margin-bottom: 1.5rem;
-    line-height: 1.2;
 }
 
-/* Párrafo descriptivo - div id="descripcion-servicio" */
-.texto-descriptivo p {
-    font-size: 1.1rem;
+.promo-section p {
+    font-size: 1rem;
     line-height: 1.6;
+    color: rgba(255, 255, 255, 0.8);
     margin-bottom: 2.5rem;
-    opacity: 0.9;
 }
 
-/* Contenedor de estadísticas - div id="estadisticas-servicio" */
-.seccion-estadisticas {
+/* Sección de estadísticas */
+.stats {
     display: flex;
-    gap: 3rem;
+    gap: 5rem;
 }
 
-/* Cada estadística individual - div class="estadistica" */
-.estadistica {
-    display: flex;
-    flex-direction: column;
-}
-
-/* Número grande en estadísticas - span class="numero-grande" */
-.numero-grande {
+.stat-item h2 {
     font-size: 3rem;
     font-weight: 700;
-    line-height: 1;
     margin-bottom: 0.5rem;
 }
 
-/* Texto descriptivo de estadísticas - span class="texto-estadistica" */
-.texto-estadistica {
+.stat-item p {
     font-size: 0.9rem;
-    opacity: 0.8;
+    margin-bottom: 0;
+    color: rgba(255, 255, 255, 0.8);
 }
 
-/* Sección derecha con la visualización de la app - div id="seccion-derecha" */
-.visualizacion-app {
+/* Ventana de la aplicación */
+.app-window {
     flex: 1;
-    display: flex;
-    justify-content: flex-end;
-    padding-left: 30px;
-}
-
-/* Mockup de navegador - div id="mockup-aplicacion" */
-.mockup-navegador {
     background-color: white;
     border-radius: 12px;
     overflow: hidden;
-    width: 100%;
-    max-width: 420px;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    max-width: 500px;
 }
 
-/* Barra superior del navegador - div id="barra-navegador" */
-.barra-superior {
-    background-color: #f8f8f8;
-    padding: 10px 15px;
-    border-bottom: 1px solid #eaeaea;
-}
-
-/* Contenedor de botones de control - div id="botones-control" */
-.botones-navegador {
+/* Controles de la ventana */
+.window-controls {
     display: flex;
-    gap: 6px;
-}
-
-/* Botones de cierre, minimizar y maximizar - span class="boton" */
-.boton {
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    display: inline-block;
-}
-
-/* Botón rojo (cerrar) - span class="boton rojo" */
-.rojo {
-    background-color: #ff5f57;
-}
-
-/* Botón amarillo (minimizar) - span class="boton amarillo" */
-.amarillo {
-    background-color: #ffbd2e;
-}
-
-/* Botón verde (maximizar) - span class="boton verde" */
-.verde {
-    background-color: #28c941;
-}
-
-/* Contenido principal de la aplicación - div id="interfaz-app" */
-.contenido-app {
-    display: flex;
-    height: 450px;
-}
-
-/* Panel izquierdo con menú de navegación - div id="menu-lateral" */
-.panel-izquierdo {
-    width: 160px;
-    background-color: #fff;
-    border-right: 1px solid #e0e0e0;
-    display: flex;
-    flex-direction: column;
+    gap: 8px;
     padding: 10px;
-}
-
-/* Banner de notificaciones - div id="panel-notificaciones" */
-.banner-notificacion {
-    display: flex;
-    align-items: center;
-    padding: 15px;
-    background-color: #212130;
-    color: white;
-    margin-bottom: 15px;
-    border-radius: 8px;
-}
-
-/* Icono de estrella en notificaciones - div class="icono-notificacion" */
-.icono-notificacion {
-    margin-right: 10px;
-}
-
-/* Contenedor de texto de notificaciones - div class="texto-notificacion" */
-.texto-notificacion {
-    flex: 1;
-}
-
-/* Título "Notifications" - div class="titulo-notificacion" */
-.titulo-notificacion {
-    font-weight: bold;
-}
-
-/* Estado "On" - div class="estado-notificacion" */
-.estado-notificacion {
-    font-size: 0.8em;
-    opacity: 0.7;
-}
-
-/* Flecha derecha en notificaciones - div class="flecha-notificacion" */
-.flecha-notificacion {
-    font-size: 1.2em;
-}
-
-/* Contenedor de opciones del menú - div id="opciones-menu" */
-.lista-menu {
-    display: flex;
-    flex-direction: column;
-}
-
-/* Cada opción del menú - div class="opcion-menu" */
-.opcion-menu {
-    display: flex;
-    align-items: center;
-    padding: 10px;
-    margin-bottom: 5px;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-/* Efecto hover en opciones del menú */
-.opcion-menu:hover {
     background-color: #f5f5f5;
 }
 
-/* Opción activa del menú (Chat) - div id="opcion-chat" */
-.opcion-menu.opcion-activa {
-    background-color: #f0f0ff;
-    border-left: 3px solid #5d5fef;
-}
-
-/* Iconos de cada opción del menú - div class="icono-menu" */
-.icono-menu {
-    margin-right: 10px;
-    width: 20px;
-    text-align: center;
-}
-
-/* Texto de cada opción del menú - div class="texto-menu" */
-.texto-menu {
-    flex: 1;
-}
-
-/* Indicador de notificación (número 1) - div class="badge-notificacion" */
-.badge-notificacion {
-    background-color: #ff3e3e;
-    color: white;
-    width: 18px;
-    height: 18px;
+.control {
+    width: 12px;
+    height: 12px;
     border-radius: 50%;
+}
+
+.red {
+    background-color: #ff5f57;
+}
+
+.yellow {
+    background-color: #febc2e;
+}
+
+.green {
+    background-color: #28c840;
+}
+
+/* Contenido de la aplicación */
+.app-content {
+    color: #333;
+    height: 100%;
+}
+
+/* Barra de notificaciones */
+.notification-bar {
+    background-color: #28292e;
+    color: white;
+    padding: 14px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.notification-text {
     display: flex;
     align-items: center;
-    justify-content: center;
-    font-size: 0.7em;
+    gap: 12px;
 }
 
-/* Panel derecho con mensajes de chat - div id="area-chat" */
-.panel-chat {
-    flex: 1;
-    padding: 15px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
+.icon {
+    font-size: 0.9rem;
 }
 
-/* Cada mensaje de chat - div class="mensaje-chat" */
-.mensaje-chat {
+.notif-title {
+    font-weight: 500;
+}
+
+.notif-status {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.9rem;
+}
+
+.chevron {
+    font-size: 1.2rem;
+}
+
+/* Contenedor principal para menú y chat */
+.main-container {
     display: flex;
-    margin-bottom: 20px;
+    height: 420px;
+}
+
+/* Menú lateral */
+.sidebar {
+    width: 200px;
+    background-color: white;
+    border-right: 1px solid #eeeeee;
+}
+
+.menu-item {
+    display: flex;
+    align-items: center;
+    padding: 12px 16px;
+    color: #555;
     position: relative;
 }
 
-/* Mensaje alineado a la derecha (primer usuario) - div id="mensaje-derecha" */
-.mensaje-derecha {
-    justify-content: flex-end;
+.menu-icon {
+    width: 24px;
+    text-align: center;
+    margin-right: 12px;
+    font-size: 1.1rem;
 }
 
-/* Mensaje alineado a la izquierda (segundo usuario) - div id="mensaje-izquierda" */
-.mensaje-izquierda {
-    justify-content: flex-start;
+.chat-icon {
+    color: #4361ee;
 }
 
-/* Contenedor del avatar con posición relativa */
-.avatar-chat {
-    position: relative;  /* Necesario para mover las imágenes dentro de él */
+.menu-text {
+    font-size: 0.95rem;
 }
 
-/* Estilo para las imágenes dentro del contenedor de avatar */
-.avatar-chat img {
-    position: absolute; /* Permite mover la imagen libremente dentro del contenedor */
-    width: 50px;
-    height: 50px;
+.menu-item.active {
+    background-color: #f0f4ff;
+    border-left: 4px solid #4361ee;
+    padding-left: 12px;
+}
+
+.menu-item.active .menu-text {
+    color: #4361ee;
+    font-weight: 500;
+}
+
+.badge {
+    background-color: #ff4757;
+    color: white;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.7rem;
+    font-weight: bold;
+    margin-left: auto;
+}
+
+/* Área de chat */
+.chat-area {
+    flex: 1;
+    background-color: #f8f9fa;
+    padding: 16px;
+    overflow-y: auto;
+}
+
+.chat-container {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+/* Chats */
+.chat-card {
+    display: flex;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.jay-chat {
+    padding: 12px;
+    gap: 12px;
+}
+
+.user-avatar img {
+    width: 64px;
+    height: 64px;
     border-radius: 8px;
     object-fit: cover;
 }
 
-
-/* Puedes mover la imagen 1 */
-.avatar-chat-1 {
-    top: 20px;    /* Ajusta este valor para moverla más arriba o abajo */
-    left: 100px;  /* Ajusta este valor para moverla más a la izquierda o derecha */
+.chat-content {
+    flex: 1;
 }
 
-/* Puedes mover la imagen 2 */
-.avatar-chat-2 {
-    top: 120px;   /* Ajusta este valor para moverla más arriba o abajo */
-    left: 300px;  /* Ajusta este valor para moverla más a la izquierda o derecha */
+.chat-header {
+    display: flex;
+    margin-bottom: 6px;
+    align-items: center;
 }
 
-
-/* Contenido del mensaje del primer usuario - div class="contenido-mensaje" */
-.contenido-mensaje {
-    background-color: #ffffff; /* Fondo amarillo para mensajes enviados */
-    padding: 10px;
-    border-radius: 10px;
-    max-width: 200px;
-    margin: 0 10px;
+.user-name {
+    font-weight: 600;
+    margin-right: 8px;
 }
 
-/* Cabecera del mensaje con nombre y rol - div class="cabecera-mensaje" */
-.cabecera-mensaje {
-    margin-bottom: 5px;
-}
-
-/* Nombre del usuario en el mensaje - div class="nombre-usuario" */
-.nombre-usuario {
-    font-weight: bold;
-}
-
-/* Rol o departamento del usuario - div class="rol-usuario" */
-.rol-usuario {
-    font-size: 0.7em;
-    color: #444;
-}
-
-/* Texto del mensaje - div class="texto-mensaje" */
-.texto-mensaje {
-    margin-bottom: 5px;
-}
-
-/* Hora del mensaje - div class="hora-mensaje" */
-.hora-mensaje {
-    font-size: 0.7em;
-    text-align: right;
-    color: #555;
-}
-
-/* Puntos de opciones del mensaje - div class="opciones-mensaje" */
-.opciones-mensaje {
-    position: absolute;
-    top: 10px;
-    right: 65px;
-    font-weight: bold;
+.user-role {
     color: #777;
+    font-size: 0.8rem;
 }
 
-/* Burbuja de mensaje para el segundo usuario - div class="burbuja-mensaje" */
-.burbuja-mensaje {
-    background-color: #212130; /* Fondo oscuro para mensajes recibidos */
+.more-options {
+    margin-left: auto;
+    color: #aaa;
+    font-size: 1.2rem;
+    line-height: 1;
+}
+
+.message {
+    margin-bottom: 4px;
+    font-size: 0.95rem;
+}
+
+.timestamp {
+    color: #888;
+    font-size: 0.8rem;
+}
+
+/* Chat del equipo */
+.team-chat {
+    justify-content: flex-end;
+    padding: 0 0 0 12px;
+    gap: 12px;
+}
+
+.team-message {
+    background-color: #333;
     color: white;
-    padding: 10px;
-    border-radius: 10px;
+    padding: 12px;
+    border-radius: 8px;
     max-width: 200px;
-    margin-left: 10px;
 }
 
-/* Marcas de verificación en los mensajes - span class="marcas-check" */
-.marcas-check {
-    color: #58b1ff; /* Color azul para los checks */
+.message-text {
+    margin-bottom: 6px;
 }
 
-/* Ajustes responsivos para pantallas menores a 1024px */
-@media (max-width: 1024px) {
-    /* Cambia la dirección a columna en móviles */
-    .pagina-contenedor {
+.message-info {
+    display: flex;
+    font-size: 0.7rem;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.check-mark {
+    margin-left: 6px;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .container {
         flex-direction: column;
-        padding: 40px 20px;
     }
     
-    /* Ajusta el espacio en versión móvil */
-    .contenido-izquierda, .visualizacion-app {
-        padding: 0;
+    .promo-section,
+    .app-window {
         max-width: 100%;
-        margin-bottom: 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .main-container {
+        flex-direction: column;
+        height: auto;
     }
     
-    /* Reduce el tamaño del título en móviles */
-    .titulo-principal h1 {
-        font-size: 2.50rem;
+    .sidebar {
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid #eee;
     }
     
-    /* Ajusta el ancho del mockup en móviles */
-    .mockup-navegador {
-        max-width: 100%;
+    .promo-section h1 {
+        font-size: 2.5rem;
     }
 }
