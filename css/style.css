@@ -604,8 +604,8 @@ h3 {
     background-color: #00624a;
     background-image: linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
                       linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
-
-    padding: 0 5%;
+    
+    padding: 0 3%;
 }
 
 /* Sección izquierda con título y descripción - div id="seccion-izquierda" */
