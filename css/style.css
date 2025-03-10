@@ -596,363 +596,245 @@ h3 {
 }
 
 /* aqui */
-.pagina-contenedor {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    min-height: 100vh;
-    background-color: #00624a;
-    background-image: linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
-                      linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
-    padding: 0 5%;
-}
-
-/* Sección izquierda con título y descripción - div id="seccion-izquierda" */
-.contenido-izquierda {
-    max-width: 550px;
-    color: white;
-    flex: 1;
-    padding-right: 30px;
-}
-
-/* Título principal - div id="encabezado-principal" */
-.titulo-principal h1 {
-    font-size: 3.5rem;
-    font-weight: 700;
-    margin-bottom: 1.5rem;
-    line-height: 1.2;
-}
-
-/* Párrafo descriptivo - div id="descripcion-servicio" */
-.texto-descriptivo p {
-    font-size: 1.1rem;
-    line-height: 1.6;
-    margin-bottom: 2.5rem;
-    opacity: 0.9;
-}
-
-/* Contenedor de estadísticas - div id="estadisticas-servicio" */
-.seccion-estadisticas {
-    display: flex;
-    gap: 3rem;
-}
-
-/* Cada estadística individual - div class="estadistica" */
-.estadistica {
+/* Contenedor principal con borde redondeado y sombra */
+.chat-container {
+    width: 400px;
+    height: 600px;
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e0e0e0;
     display: flex;
     flex-direction: column;
 }
 
-/* Número grande en estadísticas - span class="numero-grande" */
-.numero-grande {
-    font-size: 3rem;
-    font-weight: 700;
-    line-height: 1;
-    margin-bottom: 0.5rem;
-}
-
-/* Texto descriptivo de estadísticas - span class="texto-estadistica" */
-.texto-estadistica {
-    font-size: 0.9rem;
-    opacity: 0.8;
-}
-
-/* Sección derecha con la visualización de la app - div id="seccion-derecha" */
-.visualizacion-app {
-    flex: 1;
+/* Barra superior con los círculos de control de ventana */
+.window-controls {
+    background-color: #f0f0f0;
+    height: 30px;
+    padding: 8px 12px;
     display: flex;
-    justify-content: flex-end;
-    padding-left: 30px;
+    align-items: center;
+    border-bottom: 1px solid #e0e0e0;
 }
 
-/* Mockup de navegador - div id="mockup-aplicacion" */
-.mockup-navegador {
-    background-color: white;
-    border-radius: 12px;
-    overflow: hidden;
-    width: 100%;
-    max-width: 420px;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
-}
-
-/* Barra superior del navegador - div id="barra-navegador" */
-.barra-superior {
-    background-color: #f8f8f8;
-    padding: 10px 15px;
-    border-bottom: 1px solid #eaeaea;
-}
-
-/* Contenedor de botones de control - div id="botones-control" */
-.botones-navegador {
-    display: flex;
-    gap: 6px;
-}
-
-/* Botones de cierre, minimizar y maximizar - span class="boton" */
-.boton {
+/* Círculos de control de ventana (rojo, amarillo, verde) */
+.control {
     width: 12px;
     height: 12px;
     border-radius: 50%;
-    display: inline-block;
+    margin-right: 8px;
 }
 
-/* Botón rojo (cerrar) - span class="boton rojo" */
-.rojo {
-    background-color: #ff5f57;
+.red {
+    background-color: #ff5f56;
 }
 
-/* Botón amarillo (minimizar) - span class="boton amarillo" */
-.amarillo {
+.yellow {
     background-color: #ffbd2e;
 }
 
-/* Botón verde (maximizar) - span class="boton verde" */
-.verde {
-    background-color: #28c941;
+.green {
+    background-color: #27c93f;
 }
 
-/* Contenido principal de la aplicación - div id="interfaz-app" */
-.contenido-app {
+/* Estructura principal del layout */
+.chat-layout {
     display: flex;
-    height: 450px;
+    flex: 1;
+    overflow: hidden;
 }
 
-/* Panel izquierdo con menú de navegación - div id="menu-lateral" */
-.panel-izquierdo {
-    width: 160px;
-    background-color: #fff;
+/* Estilos para la barra lateral */
+.sidebar {
+    width: 180px;
+    background-color: #ffffff;
     border-right: 1px solid #e0e0e0;
     display: flex;
     flex-direction: column;
-    padding: 10px;
+    overflow-y: auto;
 }
 
-/* Banner de notificaciones - div id="panel-notificaciones" */
-.banner-notificacion {
-    display: flex;
-    align-items: center;
-    padding: 15px;
-    background-color: #212130;
+/* Sección de notificaciones */
+.notification-section {
+    padding: 10px 0;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.notification-item {
+    background-color: #222;
     color: white;
-    margin-bottom: 15px;
-    border-radius: 8px;
 }
 
-/* Icono de estrella en notificaciones - div class="icono-notificacion" */
-.icono-notificacion {
-    margin-right: 10px;
+/* Sección de menú */
+.menu-section {
+    padding: 10px 0;
 }
 
-/* Contenedor de texto de notificaciones - div class="texto-notificacion" */
-.texto-notificacion {
-    flex: 1;
-}
-
-/* Título "Notifications" - div class="titulo-notificacion" */
-.titulo-notificacion {
-    font-weight: bold;
-}
-
-/* Estado "On" - div class="estado-notificacion" */
-.estado-notificacion {
-    font-size: 0.8em;
-    opacity: 0.7;
-}
-
-/* Flecha derecha en notificaciones - div class="flecha-notificacion" */
-.flecha-notificacion {
-    font-size: 1.2em;
-}
-
-/* Contenedor de opciones del menú - div id="opciones-menu" */
-.lista-menu {
-    display: flex;
-    flex-direction: column;
-}
-
-/* Cada opción del menú - div class="opcion-menu" */
-.opcion-menu {
+/* Elementos del menú */
+.menu-item {
+    padding: 12px 15px;
     display: flex;
     align-items: center;
-    padding: 10px;
-    margin-bottom: 5px;
-    border-radius: 5px;
+    position: relative;
     cursor: pointer;
 }
 
-/* Efecto hover en opciones del menú */
-.opcion-menu:hover {
-    background-color: #f5f5f5;
+.menu-item:hover {
+    background-color: #f7f7f7;
 }
 
-/* Opción activa del menú (Chat) - div id="opcion-chat" */
-.opcion-menu.opcion-activa {
-    background-color: #f0f0ff;
-    border-left: 3px solid #5d5fef;
+.menu-item.active {
+    background-color: #e8f0fe;
+    border-left: 3px solid #5b5fc7;
 }
 
-/* Iconos de cada opción del menú - div class="icono-menu" */
-.icono-menu {
+/* Iconos del menú */
+.icon {
     margin-right: 10px;
-    width: 20px;
-    text-align: center;
+    font-size: 16px;
+    color: #666;
 }
 
-/* Texto de cada opción del menú - div class="texto-menu" */
-.texto-menu {
-    flex: 1;
+.text {
+    flex-grow: 1;
+    font-size: 14px;
+    color: #333;
 }
 
-/* Indicador de notificación (número 1) - div class="badge-notificacion" */
-.badge-notificacion {
+/* Indicador de estado y flecha */
+.status {
+    font-size: 12px;
+    color: #999;
+}
+
+.arrow {
+    font-size: 18px;
+    margin-left: 5px;
+    color: #999;
+}
+
+/* Badge para notificaciones */
+.badge {
     background-color: #ff3e3e;
     color: white;
+    border-radius: 50%;
     width: 18px;
     height: 18px;
-    border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 0.7em;
+    font-size: 10px;
 }
 
-/* Panel derecho con mensajes de chat - div id="area-chat" */
-.panel-chat {
+/* Contenido principal del chat */
+.chat-content {
     flex: 1;
     padding: 15px;
+    overflow-y: auto;
+    background-color: #f9f9f9;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
 }
 
-/* Cada mensaje de chat - div class="mensaje-chat" */
-.mensaje-chat {
+/* Contenedor de mensajes */
+.message-container {
     display: flex;
     margin-bottom: 20px;
-    position: relative;
+    max-width: 80%;
 }
 
-/* Mensaje alineado a la derecha (primer usuario) - div id="mensaje-derecha" */
-.mensaje-derecha {
-    justify-content: flex-end;
+/* Mensaje del lado izquierdo (recibido) */
+.message-container.left {
+    align-self: flex-start;
 }
 
-/* Mensaje alineado a la izquierda (segundo usuario) - div id="mensaje-izquierda" */
-.mensaje-izquierda {
-    justify-content: flex-start;
+/* Mensaje del lado derecho (enviado) */
+.message-container.right {
+    align-self: flex-end;
+    flex-direction: row-reverse;
 }
 
-/* Contenedor del avatar con posición relativa */
-.avatar-chat {
-    position: relative;  /* Necesario para mover las imágenes dentro de él */
+/* Avatar de usuario */
+.user-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 12px;
+    margin-right: 10px;
+    background-size: cover;
+    background-position: center;
 }
 
-/* Estilo para las imágenes dentro del contenedor de avatar */
-.avatar-chat img {
-    position: absolute; /* Permite mover la imagen libremente dentro del contenedor */
-    width: 50px;
-    height: 50px;
-    border-radius: 8px;
-    object-fit: cover;
-}
-
-
-/* Puedes mover la imagen 1 */
-.avatar-chat-1 {
-    top: 20px;    /* Ajusta este valor para moverla más arriba o abajo */
-    left: 100px;  /* Ajusta este valor para moverla más a la izquierda o derecha */
-}
-
-/* Puedes mover la imagen 2 */
-.avatar-chat-2 {
-    top: 120px;   /* Ajusta este valor para moverla más arriba o abajo */
-    left: 300px;  /* Ajusta este valor para moverla más a la izquierda o derecha */
-}
-
-
-/* Contenido del mensaje del primer usuario - div class="contenido-mensaje" */
-.contenido-mensaje {
-    background-color: #ffffff; /* Fondo amarillo para mensajes enviados */
-    padding: 10px;
-    border-radius: 10px;
-    max-width: 200px;
-    margin: 0 10px;
-}
-
-/* Cabecera del mensaje con nombre y rol - div class="cabecera-mensaje" */
-.cabecera-mensaje {
-    margin-bottom: 5px;
-}
-
-/* Nombre del usuario en el mensaje - div class="nombre-usuario" */
-.nombre-usuario {
-    font-weight: bold;
-}
-
-/* Rol o departamento del usuario - div class="rol-usuario" */
-.rol-usuario {
-    font-size: 0.7em;
-    color: #444;
-}
-
-/* Texto del mensaje - div class="texto-mensaje" */
-.texto-mensaje {
-    margin-bottom: 5px;
-}
-
-/* Hora del mensaje - div class="hora-mensaje" */
-.hora-mensaje {
-    font-size: 0.7em;
-    text-align: right;
-    color: #555;
-}
-
-/* Puntos de opciones del mensaje - div class="opciones-mensaje" */
-.opciones-mensaje {
-    position: absolute;
-    top: 10px;
-    right: 65px;
-    font-weight: bold;
-    color: #777;
-}
-
-/* Burbuja de mensaje para el segundo usuario - div class="burbuja-mensaje" */
-.burbuja-mensaje {
-    background-color: #212130; /* Fondo oscuro para mensajes recibidos */
-    color: white;
-    padding: 10px;
-    border-radius: 10px;
-    max-width: 200px;
+.message-container.right .user-avatar {
+    margin-right: 0;
     margin-left: 10px;
 }
 
-/* Marcas de verificación en los mensajes - span class="marcas-check" */
-.marcas-check {
-    color: #58b1ff; /* Color azul para los checks */
+/* Caja de mensaje */
+.message-box {
+    background-color: white;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    position: relative;
+    max-width: 100%;
 }
 
-/* Ajustes responsivos para pantallas menores a 1024px */
-@media (max-width: 1024px) {
-    /* Cambia la dirección a columna en móviles */
-    .pagina-contenedor {
-        flex-direction: column;
-        padding: 40px 20px;
-    }
-    
-    /* Ajusta el espacio en versión móvil */
-    .contenido-izquierda, .visualizacion-app {
-        padding: 0;
-        max-width: 100%;
-        margin-bottom: 40px;
-    }
-    
-    /* Reduce el tamaño del título en móviles */
-    .titulo-principal h1 {
-        font-size: 2.50rem;
-    }
-    
-    /* Ajusta el ancho del mockup en móviles */
-    .mockup-navegador {
-        max-width: 100%;
-    }
+/* Encabezado del mensaje */
+.message-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.username {
+    font-weight: bold;
+    font-size: 14px;
+    margin-right: 5px;
+}
+
+.department {
+    font-size: 12px;
+    color: #999;
+    background-color: #f2f2f2;
+    padding: 2px 5px;
+    border-radius: 3px;
+}
+
+/* Texto del mensaje */
+.message-text {
+    font-size: 14px;
+    line-height: 1.4;
+    word-break: break-word;
+}
+
+/* Hora del mensaje */
+.message-time {
+    font-size: 11px;
+    color: #999;
+    margin-top: 5px;
+}
+
+/* Opciones del mensaje */
+.message-options {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 14px;
+    color: #999;
+}
+
+/* Burbujas de mensaje para el lado derecho */
+.message-bubble {
+    background-color: #5b5fc7;
+    color: white;
+    border-radius: 10px;
+    padding: 10px;
+    position: relative;
+}
+
+.message-bubble .message-time {
+    color: rgba(255, 255, 255, 0.7);
 }
