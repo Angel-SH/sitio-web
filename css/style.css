@@ -451,6 +451,7 @@ h3 {
 }
 
 .hero-text h1 {
+    font-family: 'FolitoR', Arial, sans-serif;
     font-size: 52px;
     font-weight: bold;
     color: #000;
@@ -468,6 +469,7 @@ h3 {
 }
 
 .hero-image p {
+    font-family: 'FolitoR', Arial, sans-serif;
     font-size: 17px;            /* Tamaño de fuente */
     color: #666;                /* Color gris */
     max-width: 400px;           /* Ajustar el ancho máximo del texto */
@@ -581,11 +583,10 @@ h3 {
     width: 100%;
     max-width: 1500px;
     margin: 0 auto;
-    padding: 2rem;
+    padding: 10rem 5rem; /* Reduce el padding en los lados */
     gap: 2rem;
     align-items: center;
     position: relative;
-
 }
 
 /* Sección izquierda con texto promocional */
@@ -596,6 +597,7 @@ h3 {
 }
 
 .promo-section h1 {
+    font-family: 'FolitoR', Arial, sans-serif;
     font-size: 3rem; /* Ajusta el tamaño de la fuente */
     font-weight: 700;
     line-height: 1.1; /* Reduce el espacio entre líneas */
@@ -605,6 +607,7 @@ h3 {
 }
 
 .promo-section p {
+    font-family: 'Folito', Arial, sans-serif;
     font-size: 1rem;
     line-height: 1.6;
     color: rgba(255, 255, 255, 0.8);
@@ -614,21 +617,41 @@ h3 {
 /* Sección de estadísticas */
 .stats {
     display: flex;
-    gap: 5rem;
+    gap: 6rem; 
+    justify-content: center;
+    align-items: center;
+    margin-right: 2.5rem; 
 }
 
+/* Contenedor de cada estadística */
+.stat-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem; /* Espacio entre número y texto */
+    min-width: 200px; /* Asegura que cada estadística tenga el mismo ancho */
+    justify-content: center; /* Mantiene la alineación centrada */
+}
+
+/* Número grande */
 .stat-item h2 {
-    font-size: 3rem;
+    font-family: 'Folito', Arial, sans-serif;
+    font-size: 4rem;
     color: #fff;
     font-weight: 700;
-    margin-bottom: 0.5rem;
+    margin: 0;
+    white-space: nowrap; /* Evita saltos de línea */
+    text-align: right; /* Alinea el número a la derecha */
 }
 
+/* Texto pequeño */
 .stat-item p {
-    font-size: 0.9rem;
-    margin-bottom: 0;
+    font-size: 1rem;
     color: rgba(255, 255, 255, 0.8);
+    margin: 0;
+    white-space: nowrap; /* Evita saltos de línea */
+    text-align: left; /* Alinea el texto a la izquierda */
 }
+
 
 /* Ventana de la aplicación */
 .app-window {
@@ -638,8 +661,12 @@ h3 {
     overflow: hidden;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
     max-width: 500px;
-    margin-left: 7rem;
-    margin-top: 5rem;
+    width: 100%;
+    margin-left: 50px;
+    margin-right: 0; /* Asegura alineación */
+    margin-top: 4rem;
+    display: flex;
+    flex-direction: column;
 }
 
 /* Controles de la ventana */
@@ -922,8 +949,8 @@ h3 {
     }
 }
 
-    /* Testimonials container */
-   .testimonials-section {
+ /* Testimonials container */
+.testimonials-section {
     background-color: #ffffff; /* Change this to match your site's background */
     padding: 60px 0;
     width: 100%;
@@ -934,17 +961,19 @@ h3 {
     margin: 0 auto;
     padding: 60px 20px;
     text-align: center;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-family: 'FolitoR', Arial, sans-serif;
 }
 
 .testimonials-container h2 {
-    font-size: 32px;
+    font-family: 'FolitoR', Arial, sans-serif;
+    font-size: 55px;
     font-weight: 700;
     color: #1a202c;
     margin-bottom: 16px;
 }
 
 .subtext {
+    font-family: 'FolitoR', Arial, sans-serif;
     color: #718096;
     font-size: 16px;
     max-width: 600px;
@@ -957,6 +986,7 @@ h3 {
     display: flex;
     justify-content: center;
     gap: 30px;
+    margin-top: 60px;
     margin-bottom: 40px;
 }
 
@@ -1017,7 +1047,7 @@ h3 {
     display: flex;
     align-items: center;
     padding-top: 12px;
-    border-top: 1px solid #f0f0f0; /* Optional divider */
+    border-top: 1px solid #f0f0f0; 
 }
 
 .stars {
@@ -1035,30 +1065,50 @@ h3 {
 .navigation {
     display: flex;
     justify-content: center;
-    gap: 8px;
+    gap: 12px;
 }
 
 .nav-btn {
-    width: 40px;
-    height: 40px;
+    width: 60px;
+    height: 60px;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
     background: transparent;
-    border: 1px solid #e2e8f0;
-    transition: all 0.2s;
+    border: 2px solid #e2e8f0;
+    transition: all 0.2s ease-in-out;
 }
 
+/* Botón activo */
 .nav-btn.active {
     background: #005843;
     color: white;
     border-color: #005843;
 }
 
+/* SVG dentro del botón */
+.nav-btn svg {
+    width: 24px;
+    height: 24px;
+    stroke: #d2d4da; /* Color gris claro */
+    transition: stroke 0.2s ease-in-out;
+}
+
+/* SVG dentro del botón activo */
+.nav-btn.active svg {
+    stroke: white; /* Ícono blanco en el botón activo */
+}
+
+/* Efecto hover */
 .nav-btn:not(.active):hover {
     background: #f7fafc;
+    border-color: #cbd5e1;
+}
+
+.nav-btn:not(.active):hover svg {
+    stroke: #4b5563; /* Color más oscuro en hover */
 }
 
 /* Responsive adjustments */
@@ -1087,13 +1137,15 @@ h3 {
 
 /* Titles */
 .pricing-title {
-    font-size: 42px;
+    font-family: 'FolitoR', Arial, sans-serif;
+    font-size: 62px;
     font-weight: bold;
     color: #0a1626;
     margin-bottom: 10px;
 }
 
 .pricing-subtitle {
+    font-family: 'FolitoR', Arial, sans-serif;
     color: #6b7280;
     font-size: 16px;
     max-width: 600px;
@@ -1104,59 +1156,86 @@ h3 {
 /* Toggle Switch */
 .toggle-container {
     display: inline-flex;
-    background-color: #f0f2f5;
+    background-color: #f5f7fa;
     border-radius: 30px;
-    padding: 5px;
+    padding: 0;
+    margin-top: 40px;
     margin-bottom: 40px;
+    overflow: hidden;
+    width: 100%;
+    max-width: 340px;
+    border: none;
 }
 
 .toggle-button {
-    padding: 10px 30px;
+    font-family: 'FolitoR', Arial, sans-serif;
+    flex: 1;
+    padding: 12px 25px;
     border: none;
     background: none;
-    border-radius: 30px;
     cursor: pointer;
-    font-size: 16px;
-    color: #4a5568;
+    font-size: 18px;
+    font-weight: 500;
+    color: #6B7280;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.toggle-button:first-child {
+    border-radius: 30px 0 0 30px; /* Bordes redondeados solo a la izquierda */
+}
+
+.toggle-button:last-child {
+    border-radius: 0 30px 30px 0; /* Bordes redondeados solo a la derecha */
 }
 
 .toggle-button.active {
-    background-color: #005843;
+    background-color: #005843; 
     color: white;
+    border-radius: 30px 0 0 30px;
+    box-shadow: none;
 }
 
+.pricing-wrapper {
+    background-color: #ffffff; /* Color de fondo del cuadro */
+    border-radius: 20px; /* Bordes redondeados */
+    padding: 50px 30px; /* Espaciado interno */
+    max-width: 1200px; /* Ancho máximo */
+    margin: 0 auto; /* Centrar el cuadro */
+    border: 1px solid rgba(0, 0, 0, 0.1); /* Sombra */
+    position: relative;
+    margin-top: 115px; /* Espacio superior */
+    padding-bottom: 20px; /* Reducción del espacio inferior */
+}
+
+/* Contenedor de los planes */
 .pricing-container {
     display: flex;
     justify-content: center;
-    gap: 20px; /* Separa más los planes */
-    align-items: stretch;
+    gap: 20px;
+    align-items: flex-start;
     position: relative;
-    margin-top: 180px; /* Aumenta la distancia desde arriba */
-    padding-bottom: 50px; /* Agrega espacio abajo para que el contenedor no corte el plan Gold */
 }
 
 /* Pricing Cards */
 .pricing-card {
-    background: white;
-    border-radius: 12px;
-    padding: 30px;
+    padding: 45px;
     flex: 1;
     max-width: 350px;
     text-align: left;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
     position: relative;
     transition: transform 0.3s ease-in-out;
 }
 
-
 .plan-name {
+    font-family: 'FolitoR', Arial, sans-serif;
     font-size: 16px;
     font-weight: bold;
     margin-bottom: 5px;
-    color: #4a5568;
+    color: #8b8b98;
 }
 
 .plan-price {
+    font-family: 'FolitoR', Arial, sans-serif;
     font-size: 44px;
     font-weight: bold;
     margin-bottom: 20px;
@@ -1164,9 +1243,17 @@ h3 {
 }
 
 .plan-price span {
+    font-family: 'FolitoR', Arial, sans-serif;
     font-size: 16px;
     color: #6b7280;
     font-weight: normal;
+}
+
+.divider1 {
+    border: none;
+    height: 1px; 
+    background-color: #f0efef; /* Cambia este color según lo que necesites */
+    margin: 20px 0; 
 }
 
 /* Featured Plan */
@@ -1174,14 +1261,18 @@ h3 {
     background-color: #005843;
     color: white;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
-    z-index: 2;
+    z-index: 3;
     flex: 1.2;
     transform: scale(1.1);
-    margin-top: -80px; /* Eleva el plan GOLD */
+    position: relative; /* Se vuelve independiente */
+    top: -80px; /* Lo mueve hacia arriba sin afectar a los demás */
+    border-radius: 20px;
+    padding: 40px;
 }
 
-
-.featured .plan-name,
+.featured .plan-name {
+    color: #70a59a;
+}
 .featured .plan-price {
     color: white;
 }
@@ -1192,23 +1283,26 @@ h3 {
 
 .featured .plan-features li {
     color: white;
+    line-height: 2; /* Aumenta el espacio entre líneas */
 }
 
 .featured .choose-plan {
-    background-color: #ffd700;
+    background-color: #ffe51d;
     color: #0a1626;
 }
 
 /* Most Popular Tag */
 .most-popular {
+    font-family: 'FolitoR', Arial, sans-serif;
     position: absolute;
-    top: -20px;
+    top: -27px;
     left: 50%;
     transform: translateX(-50%);
-    background-color: #ffd700;
-    color: #000;
-    padding: 8px 20px;
-    border-radius: 20px;
+    background-size: 250%;
+    background-color: #ffe51d;
+    color: #005843;
+    padding: 15px 25px;
+    border-radius: 55px;
     font-weight: bold;
     font-size: 14px;
     border: 6px solid white;
@@ -1221,16 +1315,16 @@ h3 {
     justify-content: center;
     width: 20px;
     height: 20px;
-    background-color: #005843;
+    background-color: #b9e2c7;
     border-radius: 50%;
-    color: white;
+    color: #152a38;
     font-size: 12px;
     margin-right: 10px;
 }
 
 .featured .check-icon {
-    background-color: white;
-    color: #005843;
+    background-color: #32786a;
+    color: #ffffff;
 }
 
 /* Plan Features */
@@ -1241,27 +1335,35 @@ h3 {
 }
 
 .plan-features li {
+    font-family: 'FolitoR', Arial, sans-serif;
     margin-bottom: 15px;
     font-size: 15px;
     color: #4a5568;
     display: flex;
     align-items: center;
+    line-height: 2; /* Aumenta el espacio entre líneas */
 }
 
 /* Buttons */
 .choose-plan {
-    width: 100%;
-    padding: 12px;
+    font-family: 'FolitoR', Arial, sans-serif;
+    width: auto; /* Permite que el botón tenga un tamaño más natural */
+    padding: 12px 30px; /* Ajusta el padding para que no se vea tan ancho */
     border: none;
     border-radius: 30px;
-    background-color: #e2e8f0;
-    color: #0a1626;
+    background-color: #ebf2f0;
+    color: #005843;
     cursor: pointer;
     font-size: 15px;
     font-weight: bold;
-    margin-top: 15px;
+    margin-top: 30px; /* Lo empuja al final del contenedor */
 }
 
 .choose-plan:hover {
     opacity: 0.9;
+}
+
+.featured .choose-plan {
+    background-color: #ffd700;
+    color: #005843;
 }
