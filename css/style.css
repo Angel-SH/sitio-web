@@ -431,7 +431,7 @@ h3 {
 
 .hero-sectionn {
     background-color: white;
-    padding: 300px 20px;
+    padding: 30px 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -440,7 +440,7 @@ h3 {
 .hero-contentt {
     display: flex;
     justify-content: space-between;
-    max-width: 1200px;
+    max-width: 970px;
     width: 100%;
 }
 /* -esto es del titulo craft- */
@@ -474,11 +474,12 @@ h3 {
     color: #666;                /* Color gris */
     max-width: 400px;           /* Ajustar el ancho máximo del texto */
     margin-left: auto;          /* Alineación automática a la izquierda */
-    margin-right: 0;            /* No margen extra a la derecha */
+    margin-right: -130px;         /* Incrementa el margen derecho para mover el texto más a la derecha */
     line-height: 1.6;           /* Espaciado adecuado entre las líneas */
     text-align: left;           /* Alineación a la izquierda */
     word-wrap: break-word;      /* Asegura que el texto se ajuste bien */
 }
+
 
 .video-section {
     width: 100%;
