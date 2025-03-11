@@ -1063,27 +1063,23 @@ h3 {
 
 /* Sección de información del producto (Derecha) */
 .chat_interfaz_derecha {
-    margin-top: 30px;  /* Expande el fondo hacia arriba */
-    margin-bottom: 30px; /* Expande el fondo hacia abajo */
-    margin-left: 50px;  /* Expande el fondo hacia la izquierda */
-    margin-right: 50px; /* Expande el fondo hacia la derecha */
-    padding: 40px;  /* Ajusta el espacio interno, si es necesario */
+    width: 55%;
+    padding: 40px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-color: #ffffff; /* Fondo blanco */
 }
 
 .chat_interfaz_derecha h1 {
     font-size: 44px;
-    color: #000000;
+    color: #0a1744;
     margin-bottom: 30px;
     line-height: 1.2;
     font-weight: 700;
 }
 
 .chat_interfaz_parrafo {
-    color: #000000;
+    color: #6b7280;
     font-size: 18px;
     line-height: 1.6;
     margin-bottom: 20px;
