@@ -1411,3 +1411,149 @@ h3 {
 .cta-button img:hover {
     transform: scale(1.05);
 }
+
+/* Footer General */
+.footer {
+    background-color: #0c102f;
+    color: white;
+    padding: 6rem 2rem;
+    text-align: left;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Contenedor principal del footer */
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+/* Título */
+.footer-content h2 {
+    font-family: 'FolitoR', Arial, sans-serif;
+    font-size: 3.8rem;
+    font-weight: 700;
+    max-width: 600px;
+    line-height: 1.1;
+    margin-bottom: 4rem;
+    letter-spacing: -0.5px;
+}
+
+/* Información del footer (ubicación y correo) */
+.footer-info {
+    display: flex;
+    flex-direction: row; /* Cambia de columna a fila */
+    gap: 3rem; /* Espaciado entre los elementos */
+    margin-top: 2rem;
+    align-items: center; /* Asegura la alineación correcta */
+}
+
+.footer-item {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.footer-icon {
+    background-color: rgba(255, 255, 255, 0.1);
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 1.2rem;
+}
+
+/* Botón Amarillo */
+.footer-button {
+    background-color: #ffe600;
+    color: #005843;
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 16px 28px;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    white-space: nowrap;
+}
+
+.footer-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255, 230, 0, 0.3);
+}
+
+/* Línea separadora */
+.footer-bottom {
+    margin-top: 3rem; /* Reducir espacio superior */
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    padding-top: 3rem; /* Reduce el espacio interno superior */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1rem;
+    max-width: 1200px;
+    margin: 12rem auto 0; /* Ajustado para reducir el margen superior */
+}
+
+/* Enlaces de políticas */
+.footer-links {
+    display: flex;
+    gap: 2rem;
+}
+
+.footer-links a {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: white;
+}
+
+/* Añadir efecto de degradado circular como en la imagen */
+.footer::before {
+    content: "";
+    position: absolute;
+    top: 30%;
+    right: -15%;
+    width: 50%;
+    height: 90%;
+    background: radial-gradient(circle, rgba(77, 87, 222, 0.2) 0%, rgba(12, 16, 47, 0) 70%);
+    border-radius: 50%;
+    z-index: 1;
+    pointer-events: none;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .footer-content h2 {
+        font-size: 2.5rem;
+        max-width: 100%;
+    }
+    
+    .footer-bottom {
+        flex-direction: column;
+        gap: 1rem;
+        align-items: flex-start;
+    }
+    
+    .footer-info {
+        margin-bottom: 2rem;
+    }
+}
