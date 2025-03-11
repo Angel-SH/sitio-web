@@ -42,6 +42,75 @@ body {
     padding: 0.5rem;
 }
 
+/* Contenedor del switch de idioma */
+.language-switch {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-family: 'Poppins', Arial, sans-serif;
+    font-weight: 600;
+    color: white;
+    margin: 20px 26px;
+    padding: 8px 16px;
+    border-radius: 30px;
+}
+
+/* Estilos del switch */
+.switch {
+    position: relative;
+    width: 54px;
+    height: 26px;
+}
+
+/* Ocultar el checkbox */
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* Estilo del fondo del switch */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ffe51d;
+    border-radius: 34px;
+    transition: all 0.3s ease;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+/* Indicador deslizante */
+.slider:before {
+    content: "";
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    left: 3px;
+    bottom: 3px;
+    background-color: #024b3d;
+    border-radius: 50%;
+    transition: transform 0.3s ease-in-out;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+}
+
+/* Cuando el switch está activado (Inglés) */
+input:checked + .slider {
+    background-color: #ffe51d;
+}
+
+input:checked + .slider:before {
+    transform: translateX(28px);
+}
+
+/* Efecto hover */
+.switch:hover .slider {
+    box-shadow: inset 0 1px 5px rgba(0, 0, 0, 0.3);
+}
+
 .auth-buttons {
     display: flex;
     gap: 1rem;
@@ -269,14 +338,14 @@ body::before {
     
     content: '';
     position: absolute;
-    top: 0;
+    top: -50px; /* Ajusta para extender hacia arriba */
     left: 0;
     width: 100%;
     height: 100%;
     background: repeating-radial-gradient(
         circle at 0 0,
         rgba(255, 255, 255, 0.05) 0,
-        rgba(255, 255, 255, 0.05) 2px,
+        rgba(255, 255, 255, 0.05) 3px,
         transparent 2px,
         transparent 100px
     );
@@ -1006,7 +1075,6 @@ h3 {
     background: #fff;
     border-radius: 8px;
     padding: 24px;
-
     text-align: left;
     width: 330px;
     border: 1px solid #e2e8f0;
@@ -1041,7 +1109,7 @@ h3 {
 .role {
     margin: 4px 0 0;
     font-size: 14px;
-    color: #718096;
+    color: #374c6c;
 }
 
 /* Testimonial text */
@@ -1058,7 +1126,7 @@ h3 {
     display: flex;
     align-items: center;
     padding-top: 12px;
-    border-top: 1px solid #f0f0f0; 
+    border-top: 1px solid #ffffff; 
 }
 
 .stars {
@@ -1655,10 +1723,13 @@ h3 {
     font-family: 'FolitoR', Arial, sans-serif;
     font-size: 3.8rem;
     font-weight: 700;
-    max-width: 600px;
+    max-width: 700px; /* Asegura que el texto se divida en dos líneas */
     line-height: 1.1;
     margin-bottom: 4rem;
     letter-spacing: -0.5px;
+    text-align: left;
+    white-space: normal;
+    word-wrap: break-word;
 }
 
 /* Información del footer (ubicación y correo) */
