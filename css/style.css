@@ -1374,6 +1374,211 @@ h3 {
     opacity: 0.9;
 }
 
+.chat_interfaz_contenedor {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px;
+    position: relative;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    min-height: 100vh;
+    background-color: #f5f8fc;
+}
+
+/* Ventana de chat (Izquierda) */
+.chat_interfaz_izquierda {
+    background-color: #e9f5fc;
+    border-radius: 12px;
+    width: 45%;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    position: relative;
+}
+
+/* Barra superior con controles de ventana */
+.chat_interfaz_barra {
+    padding: 10px;
+    background-color: #fff;
+}
+
+.chat_interfaz_botones_control {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 10px;
+}
+
+.chat_interfaz_btn {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.chat_interfaz_btn_rojo {
+    background-color: #ff5f56;
+}
+
+.chat_interfaz_btn_amarillo {
+    background-color: #ffbd2e;
+}
+
+.chat_interfaz_btn_verde {
+    background-color: #27c93f;
+}
+
+.chat_interfaz_linea {
+    height: 1px;
+    background-color: #e0e0e0;
+    width: 100%;
+}
+
+/* Contenido del chat */
+.chat_interfaz_mensajes {
+    padding: 20px;
+    position: relative;
+}
+
+.chat_interfaz_fila {
+    display: flex;
+    margin-bottom: 15px;
+    align-items: flex-start;
+}
+
+.chat_interfaz_fila_derecha {
+    justify-content: flex-end;
+}
+
+.chat_interfaz_avatar {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.chat_interfaz_avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.chat_interfaz_texto {
+    padding: 12px 15px;
+    border-radius: 18px;
+    max-width: 70%;
+}
+
+.chat_interfaz_texto_usuario {
+    background-color: #e9f0f7;
+    color: #4a4a4a;
+}
+
+.chat_interfaz_texto_bot {
+    background-color: #7e9aff;
+    color: white;
+}
+
+.chat_interfaz_texto p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+/* Íconos circulares */
+.chat_interfaz_circulo {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.chat_interfaz_circulo_naranja {
+    background-color: #ff6b46;
+}
+
+.chat_interfaz_icono_email {
+    position: absolute;
+    left: 0px; /* Asegura que el ícono esté fuera del borde izquierdo del chat */
+    top: 50%; /* Centra el ícono verticalmente */
+    transform: translateY(-50%); /* Centra verticalmente el ícono */
+    z-index: 10; /* Asegura que el ícono esté por encima del contenido del chat */
+}
+
+.chat_interfaz_circulo_amarillo {
+    width: 60px;  /* Aumenta el tamaño del contenedor circular */
+    height: 60px; /* Aumenta el tamaño del contenedor circular */
+    background-color: #ffcd4e;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.chat_interfaz_icono_llamada {
+    position: absolute;
+    right: 20px;
+    bottom: 100px;
+}
+
+/* Sección de información del producto (Derecha) */
+.chat_interfaz_derecha {
+    width: 55%;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.chat_interfaz_derecha h1 {
+    font-size: 44px;
+    color: #0a1744;
+    margin-bottom: 30px;
+    line-height: 1.2;
+    font-weight: 700;
+}
+
+.chat_interfaz_parrafo {
+    color: #6b7280;
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.chat_interfaz_boton_wrapper {
+    margin-top: 30px;
+}
+
+.chat_interfaz_boton {
+    display: inline-block;
+    background-color: #046947;
+    color: white;
+    padding: 14px 30px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.chat_interfaz_boton:hover {
+    background-color: #034e35;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    .chat_interfaz_contenedor {
+        flex-direction: column;
+    }
+    
+    .chat_interfaz_izquierda, .chat_interfaz_derecha {
+        width: 100%;
+    }
+    
+    .chat_interfaz_izquierda {
+        margin-bottom: 30px;
+    }
+}
 .featured .choose-plan {
     background-color: #ffd700;
     color: #005843;
