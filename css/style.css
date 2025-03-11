@@ -345,131 +345,93 @@ body::before {
 .tools-grid .tool-icon:nth-child(n+8) {
     margin-top: 5rem;  /* Espacio entre las filas */
 }
-
+/* Estilo general del contenedor de contenido */
 .content-chat {
-    display: flex;
-    justify-content: space-between;
-    gap: 3rem;
-    margin-top: 12rem;
+    display: flex; /* Usamos flexbox para organizar el contenido */
+    justify-content: space-between; /* Espacio entre las secciones */
+    gap: 3rem; /* Espacio entre las secciones */
+    margin-top: 12rem; /* Margen superior para separarlo del contenido anterior */
+    padding-left: 20px; /* Añadimos un pequeño margen a la izquierda para separar el texto del borde */
 }
 
 .content1 {
-    flex: 1;
-    text-align: left;
+    flex: 1; /* Ocupa el espacio restante disponible */
+    text-align: left; /* Alineamos el texto a la izquierda */
+    max-width: 60%; /* Limita el ancho del texto */
+    color: #333; /* Definimos el color del texto como oscuro para asegurar su visibilidad */
+    line-height: 1.8; /* Aumentamos la altura de las líneas para dar más espacio entre ellas */
+    margin-right: 5%; /* Añadimos un margen a la derecha para separar el texto de la imagen */
+    padding-top: 20px; /* Añadimos un espacio en la parte superior */
 }
 
-h2 {
-    font-size: 2.5rem; /* Ajuste para el tamaño del título superior */
-    font-weight: bold;
-    color: #333;
-    margin-bottom: 2rem;
-    text-align: center;
-}
-
+/* Estilo para el título principal */
 h3 {
     font-family: 'FolitoR', Arial, sans-serif;
-    font-size: 3rem;  /* Aumentar el tamaño de la fuente */
-    font-weight: bold;  /* Aplicar negrita */
-    margin-bottom: 1rem;
+    font-size: 3rem;  /* Aumentamos el tamaño de la fuente para mayor impacto */
+    font-weight: bold;  /* Aplicamos negrita */
+    margin-bottom: 1rem; /* Reducimos el espacio debajo */
     color: #090c2d;
-    line-height: 1.2; /* Ajustar el interlineado */
+    line-height: 1.4; /* Ajustamos el interlineado */
 }
 
-.subtitle {
-    color: #666;
-    margin-bottom: 2rem;
-    line-height: 1.6;
-}
-
+/* Estilo para la lista de características */
 .features {
     list-style: none;
+    margin-left: 0; /* Eliminamos el margen izquierdo */
+    padding-left: 0; /* Eliminamos el padding izquierdo */
+    margin-top: 1rem; /* Añadimos un margen superior para separar la lista del texto */
 }
 
+/* Estilo para los items de la lista */
 .feature-item {
     display: flex;
     align-items: center;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem; /* Aumentamos el margen inferior entre los elementos */
     color: #333;
+    font-size: 1.2rem; /* Aumentamos el tamaño de la fuente para mejorar la legibilidad */
+    line-height: 1.6; /* Añadimos un poco más de espacio entre las líneas */
 }
 
+/* Estilo para los puntos verdes antes de cada item */
 .feature-item::before {
     content: "";
     display: inline-block;
     width: 20px;
     height: 20px;
-    margin-right: 10px;
-    background: #00c853;
+    margin-right: 15px; /* Aumentamos el espacio entre el punto y el texto */
+    background: #00c853; /* Color del icono verde */
     border-radius: 50%;
 }
 
-.feature-item::after {
-    content: "✓";
-    position: absolute;
-    color: white;
-    margin-left: -17px;
-    margin-top: -2px;
-}
 
+/* Estilo para la ventana del chat */
 .chat-window {
-    background: #fff;
-    border-radius: 12px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-    padding: 1rem;
-    width: 400px;
+    flex: 1; /* Ocupa el espacio restante disponible */
+    width: 100%;  /* Asegura que ocupe todo el ancho disponible */
+    height: 600px; /* Ajusta la altura para que se vea bien */
+    position: relative; /* Posición relativa para el contenido dentro */
+    display: flex; /* Usamos flexbox para organizar la imagen */
+    justify-content: center; /* Centra la imagen horizontalmente */
+    align-items: flex-start; /* Alinea la imagen al principio (puedes cambiar a flex-end o center según prefieras) */
+    overflow: hidden; /* Evita que la imagen se desborde fuera del contenedor */
 }
 
-.window-header {
-    display: flex;
-    gap: 6px;
-    margin-bottom: 1rem;
+/* Estilo para la imagen dentro de la ventana del chat */
+.chat-image {
+    max-width: 100%; /* La imagen ocupará como máximo el 100% del contenedor */
+    height: auto; /* Mantiene la proporción de la imagen */
+    border-radius: 12px; /* Bordes redondeados para la imagen */
+    transform: scale(0.9); /* Reduce el tamaño de la imagen al 80% */
+    transition: transform 0.3s ease-in-out; /* Suaviza el cambio del tamaño */
+    margin-top: -40px; /* Ajusta esta propiedad para mover la imagen hacia abajo */
+    /* Si quieres mover la imagen hacia arriba, usa un valor negativo como: margin-top: -20px; */
 }
 
-.dot {
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-}
-
-.dot-red { background: #ff5f57; }
-.dot-yellow { background: #febc2e; }
-.dot-green { background: #28c940; }
-
-.chat-messages {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-}
-
-.message {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-}
-
-.avatar {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background: #f0f0f0;
-}
-
-.message-content {
-    background: #f5f5f5;
-    padding: 1rem;
-    border-radius: 12px;
-    width: 80%;
-    height: auto;
-}
-
-.timestamp {
-    font-size: 12px;
-    color: #aaa;
-    text-align: right;
-}
+/* Aqui termina el primer chat */
 
 .hero-sectionn {
     background-color: white;
-    padding: 40px 20px;
+    padding: 300px 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -481,53 +443,68 @@ h3 {
     max-width: 1200px;
     width: 100%;
 }
-
+/* -esto es del titulo craft- */
 .hero-text {
     flex: 1;
     padding-right: 20px;
+    margin-bottom: 40px; /* Ajusta este valor para aumentar la separación */
 }
 
 .hero-text h1 {
-    font-size: 36px;
+    font-size: 52px;
     font-weight: bold;
+    color: #000;
     margin-bottom: 10px;
     line-height: 1.2;
+    width: 800%;
+    white-space: normal;
+    margin-left: -120px;     /* Mueve el texto hacia la izquierda ajustando el valor */
 }
 
+/* -esto es del texto gris- */
 .hero-image {
     flex: 1;
     text-align: right;
 }
 
 .hero-image p {
-    font-size: 14px;
-    color: #666;
-    max-width: 300px;
-    margin-left: auto;
-    line-height: 1.5;
+    font-size: 17px;            /* Tamaño de fuente */
+    color: #666;                /* Color gris */
+    max-width: 400px;           /* Ajustar el ancho máximo del texto */
+    margin-left: auto;          /* Alineación automática a la izquierda */
+    margin-right: 0;            /* No margen extra a la derecha */
+    line-height: 1.6;           /* Espaciado adecuado entre las líneas */
+    text-align: left;           /* Alineación a la izquierda */
+    word-wrap: break-word;      /* Asegura que el texto se ajuste bien */
 }
 
 .video-section {
     width: 100%;
-    padding: 20px 0;
+    padding: 50px 0;
     position: relative;
 }
 
 .video-container {
     position: relative;
-    max-width: 600px;
+    max-width: 1200px;
     margin: 0 auto;
     border-radius: 15px;
-    overflow: hidden;
+    overflow: hidden;  /* Asegúrate de que no haya bordes visibles extra */
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    background-color: transparent;  /* Elimina cualquier fondo blanco */
 }
 
 .video-container img {
     width: 100%;
+    height: 100%; /* Asegura que la imagen ocupe todo el contenedor */
+    object-fit: cover; /* Ajusta la imagen para que ocupe todo el espacio del contenedor sin deformarse */
     display: block;
-    border-radius: 15px;
+    border-radius: 0;  /* Elimina cualquier borde redondeado de la imagen */
 }
 
+
+
+/* - El botón de la imagen de play -
 .play-button {
     position: absolute;
     top: 50%;
@@ -550,10 +527,12 @@ h3 {
     border-color: transparent transparent transparent #ff7e00;
     margin-left: 5px;
 }
+*/
 
+/* -Esto es codigo de la seño Mariana-
 .chat-bubble {
     position: absolute;
-    bottom: 20px;
+    bottom: 200px;
     left: 20px;
     background-color: white;
     border-radius: 10px;
@@ -576,7 +555,7 @@ h3 {
     font-weight: bold;
     color: white;
 }
-
+*/
 .chat-text {
     font-size: 12px;
 }
@@ -816,7 +795,7 @@ h3 {
     overflow-y: auto;
 }
 
-.chat-container {
+.chat-contenedor {
     display: flex;
     flex-direction: column;
     gap: 16px;
