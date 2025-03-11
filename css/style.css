@@ -117,6 +117,7 @@ body {
     max-width: 800px;
     margin: 0 auto;
     text-align: center;
+    display: block;
 }
 
 @font-face {
@@ -142,6 +143,7 @@ body {
     margin-bottom: 2rem;
     opacity: 0.9;
     white-space: pre-line;  /* Mantiene los saltos de línea dentro del texto */
+    display: block;
 }
 
 .cta-buttons {
@@ -309,6 +311,7 @@ body::before {
 }
 
 .tools-grid {
+    margin-top: 3rem; /* Espacio entre el título y los íconos */
     display: flex;
     flex-wrap: wrap;  /* Permite que los íconos se ajusten a la siguiente fila */
     gap: 2rem;  /* Espacio entre los íconos */
@@ -598,7 +601,7 @@ h3 {
 
 .promo-section h1 {
     font-family: 'FolitoR', Arial, sans-serif;
-    font-size: 3rem; /* Ajusta el tamaño de la fuente */
+    font-size: 3.5rem; /* Ajusta el tamaño de la fuente */
     font-weight: 700;
     line-height: 1.1; /* Reduce el espacio entre líneas */
     text-align: left;
@@ -611,22 +614,30 @@ h3 {
     font-size: 1rem;
     line-height: 1.6;
     color: rgba(255, 255, 255, 0.8);
+    margin-top: 1.6rem;
     margin-bottom: 2.5rem;
 }
+
+
 
 /* Sección de estadísticas */
 .stats {
     display: flex;
-    gap: 6rem; 
-    justify-content: center;
+    justify-content: flex-start;  /* Alinea todo a la izquierda */
+    gap: 40px;  /* Ajusta la distancia entre elementos */
     align-items: center;
-    margin-right: 2.5rem; 
+    max-width: 600px;  /* Ajusta el ancho según el texto */
+    margin-left: 0;  /* Alinea con el margen izquierdo */
+    text-align: left;  /* Asegura que los textos estén alineados */
+    white-space: nowrap;
 }
+
 
 /* Contenedor de cada estadística */
 .stat-item {
     display: flex;
     align-items: center;
+    padding: 5px 100px;
     gap: 1rem; /* Espacio entre número y texto */
     min-width: 200px; /* Asegura que cada estadística tenga el mismo ancho */
     justify-content: center; /* Mantiene la alineación centrada */
@@ -1419,6 +1430,7 @@ h3 {
     padding: 6rem 2rem;
     text-align: left;
     position: relative;
+    padding: 3rem 2rem;
     overflow: hidden;
 }
 
