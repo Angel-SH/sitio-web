@@ -22,3 +22,4 @@ document.querySelector('.scroll-down').addEventListener('click', function() {
         behavior: 'smooth' // Animación suave
     });
 });
+
