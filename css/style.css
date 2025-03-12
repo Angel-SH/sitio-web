@@ -42,6 +42,75 @@ body {
     padding: 0.5rem;
 }
 
+/* Contenedor del switch de idioma */
+.language-switch {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-family: 'Poppins', Arial, sans-serif;
+    font-weight: 600;
+    color: white;
+    margin: 20px 26px;
+    padding: 8px 16px;
+    border-radius: 30px;
+}
+
+/* Estilos del switch */
+.switch {
+    position: relative;
+    width: 54px;
+    height: 26px;
+}
+
+/* Ocultar el checkbox */
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* Estilo del fondo del switch */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ffe51d;
+    border-radius: 34px;
+    transition: all 0.3s ease;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+/* Indicador deslizante */
+.slider:before {
+    content: "";
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    left: 3px;
+    bottom: 3px;
+    background-color: #024b3d;
+    border-radius: 50%;
+    transition: transform 0.3s ease-in-out;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+}
+
+/* Cuando el switch está activado (Inglés) */
+input:checked + .slider {
+    background-color: #ffe51d;
+}
+
+input:checked + .slider:before {
+    transform: translateX(28px);
+}
+
+/* Efecto hover */
+.switch:hover .slider {
+    box-shadow: inset 0 1px 5px rgba(0, 0, 0, 0.3);
+}
+
 .auth-buttons {
     display: flex;
     gap: 1rem;
@@ -117,6 +186,7 @@ body {
     max-width: 800px;
     margin: 0 auto;
     text-align: center;
+    display: block;
 }
 
 @font-face {
@@ -142,6 +212,7 @@ body {
     margin-bottom: 2rem;
     opacity: 0.9;
     white-space: pre-line;  /* Mantiene los saltos de línea dentro del texto */
+    display: block;
 }
 
 .cta-buttons {
@@ -267,14 +338,14 @@ body::before {
     
     content: '';
     position: absolute;
-    top: 0;
+    top: -50px; /* Ajusta para extender hacia arriba */
     left: 0;
     width: 100%;
     height: 100%;
     background: repeating-radial-gradient(
         circle at 0 0,
         rgba(255, 255, 255, 0.05) 0,
-        rgba(255, 255, 255, 0.05) 2px,
+        rgba(255, 255, 255, 0.05) 3px,
         transparent 2px,
         transparent 100px
     );
@@ -309,6 +380,7 @@ body::before {
 }
 
 .tools-grid {
+    margin-top: 3rem; /* Espacio entre el título y los íconos */
     display: flex;
     flex-wrap: wrap;  /* Permite que los íconos se ajusten a la siguiente fila */
     gap: 2rem;  /* Espacio entre los íconos */
@@ -431,10 +503,11 @@ h3 {
 
 .hero-sectionn {
     background-color: white;
-    padding: 30px 20px;
+    padding: 80px 40px; /* Aumenta el espacio superior e inferior */
     display: flex;
     flex-direction: column;
     align-items: center;
+    min-height: 500px; /* Define una altura mínima mayor */
 }
 
 .hero-contentt {
@@ -457,9 +530,10 @@ h3 {
     color: #0c102f;
     margin-bottom: 10px;
     line-height: 1.2;
-    width: 800%;
+    max-width: 750px;
     white-space: normal;
-    margin-left: -120px;     /* Mueve el texto hacia la izquierda ajustando el valor */
+    margin-left: -120px;
+    word-break: break-word;
 }
 
 /* -esto es del texto gris- */
@@ -470,42 +544,43 @@ h3 {
 
 .hero-image p {
     font-family: 'FolitoR', Arial, sans-serif;
-    font-size: 17px;            /* Tamaño de fuente */
+    font-size: 19px;            /* Tamaño de fuente */
     color: #666;                /* Color gris */
-    max-width: 400px;           /* Ajustar el ancho máximo del texto */
+    max-width: 500px;           /* Ajustar el ancho máximo del texto */
     margin-left: auto;          /* Alineación automática a la izquierda */
     margin-right: -130px;         /* Incrementa el margen derecho para mover el texto más a la derecha */
     line-height: 1.6;           /* Espaciado adecuado entre las líneas */
     text-align: left;           /* Alineación a la izquierda */
     word-wrap: break-word;      /* Asegura que el texto se ajuste bien */
+    margin-top: 30px;           /* Ajusta el margen superior */
 }
 
-
 .video-section {
-    width: 100%;
-    padding: 50px 0;
-    position: relative;
+    position: relative; /* Para que los elementos internos puedan usar posición absoluta */
+    background-color: var(--primary-green); /* Color de fondo de la parte inferior */
+    padding-top: 90px; /* Ajusta según necesites */
 }
 
 .video-container {
-    position: relative;
-    max-width: 1200px;
-    margin: 0 auto;
-    border-radius: 15px;
-    overflow: hidden;  /* Asegúrate de que no haya bordes visibles extra */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    background-color: transparent;  /* Elimina cualquier fondo blanco */
+    position: absolute;
+    top: -100px;
+    left: 50%; /* Cambiado a 50% en lugar de 42% */
+    transform: translateX(-50%);
+    max-width: 800px;
+    width: 100%;
+    z-index: 10;
 }
 
 .video-container img {
-    width: 100%;
-    height: 100%; /* Asegura que la imagen ocupe todo el contenedor */
-    object-fit: cover; /* Ajusta la imagen para que ocupe todo el espacio del contenedor sin deformarse */
-    display: block;
-    border-radius: 0;  /* Elimina cualquier borde redondeado de la imagen */
+    position: relative;
+    width: 520%;
+    max-width: 1000px; 
+    border-radius: 15px;
+    height: auto;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    display: block !important;
+    margin-left: -8%; /* Este ajuste compensa el cambio de left: 42% a 50% */
 }
-
-
 
 /* - El botón de la imagen de play -
 .play-button {
@@ -583,7 +658,7 @@ h3 {
     display: flex;
     width: 100%;
     max-width: 1500px;
-    margin: 0 auto;
+    margin: 200px auto 0 auto; 
     padding: 10rem 5rem; /* Reduce el padding en los lados */
     gap: 2rem;
     align-items: center;
@@ -599,7 +674,7 @@ h3 {
 
 .promo-section h1 {
     font-family: 'FolitoR', Arial, sans-serif;
-    font-size: 3rem; /* Ajusta el tamaño de la fuente */
+    font-size: 3.5rem; /* Ajusta el tamaño de la fuente */
     font-weight: 700;
     line-height: 1.1; /* Reduce el espacio entre líneas */
     text-align: left;
@@ -612,22 +687,30 @@ h3 {
     font-size: 1rem;
     line-height: 1.6;
     color: rgba(255, 255, 255, 0.8);
+    margin-top: 1.6rem;
     margin-bottom: 2.5rem;
 }
+
+
 
 /* Sección de estadísticas */
 .stats {
     display: flex;
-    gap: 6rem; 
-    justify-content: center;
+    justify-content: flex-start;  /* Alinea todo a la izquierda */
+    gap: 40px;  /* Ajusta la distancia entre elementos */
     align-items: center;
-    margin-right: 2.5rem; 
+    max-width: 600px;  /* Ajusta el ancho según el texto */
+    margin-left: 0;  /* Alinea con el margen izquierdo */
+    text-align: left;  /* Asegura que los textos estén alineados */
+    white-space: nowrap;
 }
+
 
 /* Contenedor de cada estadística */
 .stat-item {
     display: flex;
     align-items: center;
+    padding: 5px 100px;
     gap: 1rem; /* Espacio entre número y texto */
     min-width: 200px; /* Asegura que cada estadística tenga el mismo ancho */
     justify-content: center; /* Mantiene la alineación centrada */
@@ -996,7 +1079,6 @@ h3 {
     background: #fff;
     border-radius: 8px;
     padding: 24px;
-
     text-align: left;
     width: 330px;
     border: 1px solid #e2e8f0;
@@ -1031,7 +1113,7 @@ h3 {
 .role {
     margin: 4px 0 0;
     font-size: 14px;
-    color: #718096;
+    color: #374c6c;
 }
 
 /* Testimonial text */
@@ -1048,7 +1130,7 @@ h3 {
     display: flex;
     align-items: center;
     padding-top: 12px;
-    border-top: 1px solid #f0f0f0; 
+    border-top: 1px solid #ffffff; 
 }
 
 .stars {
@@ -1665,6 +1747,7 @@ h3 {
     padding: 6rem 2rem;
     text-align: left;
     position: relative;
+    padding: 3rem 2rem;
     overflow: hidden;
 }
 
@@ -1684,10 +1767,13 @@ h3 {
     font-family: 'FolitoR', Arial, sans-serif;
     font-size: 3.8rem;
     font-weight: 700;
-    max-width: 600px;
+    max-width: 700px; /* Asegura que el texto se divida en dos líneas */
     line-height: 1.1;
     margin-bottom: 4rem;
     letter-spacing: -0.5px;
+    text-align: left;
+    white-space: normal;
+    word-wrap: break-word;
 }
 
 /* Información del footer (ubicación y correo) */
@@ -1765,20 +1851,6 @@ h3 {
 
 .footer-links a:hover {
     color: white;
-}
-
-/* Añadir efecto de degradado circular como en la imagen */
-.footer::before {
-    content: "";
-    position: absolute;
-    top: 30%;
-    right: -15%;
-    width: 50%;
-    height: 90%;
-    background: radial-gradient(circle, rgba(77, 87, 222, 0.2) 0%, rgba(12, 16, 47, 0) 70%);
-    border-radius: 50%;
-    z-index: 1;
-    pointer-events: none;
 }
 
 /* Responsive */
