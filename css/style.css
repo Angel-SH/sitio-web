@@ -1364,37 +1364,43 @@ h3 {
     opacity: 0.9;
 }
 
+/* aqui es donde falta editar */
+/* Contenedor principal - Aseguramos que sea completamente opaco */
 .chat_interfaz_contenedor {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 40px;
-    position: relative;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    min-height: 100vh;
-    background-color: #f5f8fc;
+    background-color: #ffffff; /* Fondo opaco */
+    position: relative;
+    max-width: 1800px;
+    margin: 0 auto;
+    gap: 20px; /* Reducido el espacio entre los contenedores */
 }
 
-/* Ventana de chat (Izquierda) */
+/* Ventana de chat (Izquierda) - Aseguramos opacidad completa */
 .chat_interfaz_izquierda {
-    background-color: #e9f5fc;
+    width: 35%;
     border-radius: 12px;
-    width: 45%;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
     overflow: hidden;
+    background-color: white; /* Fondo blanco completamente opaco */
     position: relative;
+    transform: translateX(100px); /* Mueve el contenedor 20px hacia la derecha */
 }
 
-/* Barra superior con controles de ventana */
+/* Barra superior con controles de ventana - Aseguramos opacidad completa */
 .chat_interfaz_barra {
-    padding: 10px;
-    background-color: #fff;
+    padding: 15px;
+    background-color: #fff; /* Aseguramos que sea opaco */
+    border-bottom: 1px solid #f0f0f0;
 }
 
 .chat_interfaz_botones_control {
     display: flex;
-    gap: 8px;
-    margin-bottom: 10px;
+    gap: 6px;
+    margin-bottom: 8px;
 }
 
 .chat_interfaz_btn {
@@ -1422,10 +1428,10 @@ h3 {
     width: 100%;
 }
 
-/* Contenido del chat */
+/* Contenido del chat - Aseguramos opacidad completa */
 .chat_interfaz_mensajes {
     padding: 20px;
-    position: relative;
+    background-color: #e9f5fc; /* Aseguramos opacidad completa */
 }
 
 .chat_interfaz_fila {
@@ -1439,11 +1445,12 @@ h3 {
 }
 
 .chat_interfaz_avatar {
-    width: 40px;
-    height: 40px;
+    width: 36px;
+    height: 36px;
     margin-right: 10px;
     border-radius: 50%;
     overflow: hidden;
+    background-color: white; /* Aseguramos fondo opaco para avatar */
 }
 
 .chat_interfaz_avatar img {
@@ -1452,14 +1459,15 @@ h3 {
     object-fit: cover;
 }
 
+/* Aseguramos opacidad completa en los textos */
 .chat_interfaz_texto {
-    padding: 12px 15px;
+    padding: 10px 15px;
     border-radius: 18px;
     max-width: 70%;
 }
 
 .chat_interfaz_texto_usuario {
-    background-color: #e9f0f7;
+    background-color: #ffffff;
     color: #4a4a4a;
 }
 
@@ -1474,7 +1482,7 @@ h3 {
     line-height: 1.4;
 }
 
-/* Íconos circulares */
+/* Íconos circulares fuera del chat - Aseguramos opacidad completa */
 .chat_interfaz_circulo {
     width: 50px;
     height: 50px;
@@ -1482,74 +1490,106 @@ h3 {
     display: flex;
     justify-content: center;
     align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .chat_interfaz_circulo_naranja {
     background-color: #ff6b46;
 }
 
+.chat_interfaz_circulo_amarillo {
+    background-color: #ffcd4e;
+}
+
+/* Posicionamiento de los íconos fuera del chat */
 .chat_interfaz_icono_email {
     position: absolute;
-    left: 0px; /* Asegura que el ícono esté fuera del borde izquierdo del chat */
-    top: 50%; /* Centra el ícono verticalmente */
-    transform: translateY(-50%); /* Centra verticalmente el ícono */
-    z-index: 10; /* Asegura que el ícono esté por encima del contenido del chat */
+    left: 115px; /* Mueve el ícono de Gmail a la derecha */
+    top: 53%; /* Centra el ícono verticalmente */
+    transform: translateY(-50%); /* Ajuste para que quede centrado verticalmente */
 }
 
-.chat_interfaz_circulo_amarillo {
-    width: 60px;  /* Aumenta el tamaño del contenedor circular */
-    height: 60px; /* Aumenta el tamaño del contenedor circular */
-    background-color: #ffcd4e;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
+/* Ícono de llamada (reposicionado fuera del chat) */
 .chat_interfaz_icono_llamada {
     position: absolute;
-    right: 20px;
-    bottom: 100px;
+    left: 550px; /* Mueve el ícono de Gmail a la derecha */
+    top: 55.6%; /* Centra el ícono verticalmente */
+    transform: translateY(-50%); /* Ajuste para que quede centrado verticalmente */
 }
 
-/* Sección de información del producto (Derecha) */
+/* Sección de información del producto (Derecha) - Aseguramos opacidad completa */
 .chat_interfaz_derecha {
-    width: 55%;
-    padding: 40px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    width: 35%;
+    padding: 20px 0;
+    background-color: #ffffff; /* Fondo opaco */
+    margin-left: 0; /* Eliminar margen izquierdo */
+    margin-top: -500px; /* Mueve el contenedor hacia arriba */
+    transform: translateX(850px); /* Mueve el contenedor más a la derecha */
+    overflow: visible; /* Asegura que el contenido no se recorte */
 }
+
+
 
 .chat_interfaz_derecha h1 {
-    font-size: 44px;
+    font-size: 40px;
     color: #0a1744;
-    margin-bottom: 30px;
+    margin-bottom: 25px;
     line-height: 1.2;
     font-weight: 700;
 }
 
 .chat_interfaz_parrafo {
     color: #6b7280;
-    font-size: 18px;
+    font-size: 16px;
     line-height: 1.6;
     margin-bottom: 20px;
 }
 
 .chat_interfaz_boton_wrapper {
-    margin-top: 30px;
+    margin-top: 25px;
 }
 
 .chat_interfaz_boton {
     display: inline-block;
     background-color: #046947;
     color: white;
-    padding: 14px 30px;
-    border-radius: 30px;
+    padding: 12px 25px;
+    border-radius: 25px;
     text-decoration: none;
     font-weight: 600;
     font-size: 16px;
     transition: background-color 0.3s ease;
 }
+
+.chat_interfaz_boton:hover {
+    background-color: #035738;
+}
+
+/* Ajustes responsive */
+@media (max-width: 991px) {
+    .chat_interfaz_contenedor {
+        flex-direction: column;
+        padding: 20px;
+    }
+    
+    .chat_interfaz_izquierda, 
+    .chat_interfaz_derecha {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    
+    .chat_interfaz_icono_email {
+        left: 0;
+        top: -25px;
+    }
+    
+    .chat_interfaz_icono_llamada {
+        right: 0;
+        bottom: -25px;
+    }
+}
+
+/* aqui termina */
 
 .chat_interfaz_boton:hover {
     background-color: #034e35;
