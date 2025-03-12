@@ -16,7 +16,8 @@ document.addEventListener("DOMContentLoaded", function () {
             "tools-title": "Effortless integration with your preferred tools",
             
             // TR ACcess a unified section
-            // TR Craft a communication section 
+            "hero-video-title": "Craft a communication<br>strategy using live video chat",
+            "hero-video-description": "Video conferencing enhances productivity and fosters collaboration, making it a versatile tool for achieving these goals.",
 
             "promo-title": "Get direct orders from your customers",
             "promo-description": "Create custom landing pages with Rare blocks that converts more visitors than any website. With lots of unique blocks easily build a page. There are many variations of passages of available.",
@@ -93,7 +94,8 @@ document.addEventListener("DOMContentLoaded", function () {
             "tools-title": "Integración sin esfuerzo con tus herramientas preferidas",
             
             // TR ACcess a unified section 
-            // TR Craft a communication section 
+            "hero-video-title": "Elabora una estrategia de comunicación<br>utilizando chat de video en vivo",
+            "hero-video-description": "Las videoconferencias mejoran la productividad y fomentan la colaboración, convirtiéndolas en una herramienta versátil para alcanzar estos objetivos.", 
             
             "promo-title": "Recibe pedidos directos de tus clientes",
             "promo-description": "Crea páginas de destino personalizadas con Rare blocks que convierten más visitantes que cualquier otro sitio web. Con muchos bloques únicos, crea fácilmente una página. Hay muchas variaciones de pasajes disponibles.",
