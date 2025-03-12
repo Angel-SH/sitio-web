@@ -419,12 +419,17 @@ body::before {
 }
 /* Estilo general del contenedor de contenido */
 .content-chat {
-    display: flex; /* Usamos flexbox para organizar el contenido */
-    justify-content: space-between; /* Espacio entre las secciones */
-    gap: 3rem; /* Espacio entre las secciones */
-    margin-top: 12rem; /* Margen superior para separarlo del contenido anterior */
-    padding-left: 20px; /* Añadimos un pequeño margen a la izquierda para separar el texto del borde */
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Asegura que los elementos estén alineados */
+    flex-wrap: wrap; /* Permite que los elementos se ajusten en pantallas más pequeñas */
+    gap: 2rem; /* Reduce el espacio entre elementos */
+    margin-top: 10rem; /* Ajusta la separación superior */
+    max-width: 1200px; /* Limita el ancho para evitar que se expanda demasiado */
+    margin-left: auto;
+    margin-right: auto;
 }
+
 
 .content1 {
     flex: 1; /* Ocupa el espacio restante disponible */
