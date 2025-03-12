@@ -15,7 +15,11 @@ document.addEventListener("DOMContentLoaded", function () {
             "scroll-down": "SCROLL DOWN",
             "tools-title": "Effortless integration with your preferred tools",
             
-            // TR ACcess a unified section
+            "chat-title": "An ideal interface for swift, code-free support",
+            "chat-desc-1": "The Visual Builder enables you to effortlessly create a top-notch AI chatbot with no coding required. Drag and drop conversational elements, and instantly test them to craft engaging client interactions.",
+            "chat-desc-2": "Experience a modern messaging platform that seamlessly integrates everything essential for effective support, sales, and engagement, all within a user-friendly interface.",
+            "chat-btn": "Learn More",
+
             "hero-video-title": "Craft a communication<br>strategy using live video chat",
             "hero-video-description": "Video conferencing enhances productivity and fosters collaboration, making it a versatile tool for achieving these goals.",
 
@@ -93,7 +97,11 @@ document.addEventListener("DOMContentLoaded", function () {
             "scroll-down": "DESPLAZARSE HACIA ABAJO",
             "tools-title": "Integración sin esfuerzo con tus herramientas preferidas",
             
-            // TR ACcess a unified section 
+            "chat-title": "Una interfaz ideal para un soporte ágil y sin código",
+            "chat-desc-1": "El Constructor Visual te permite crear sin esfuerzo un chatbot de IA de alta calidad sin necesidad de programación. Arrastra y suelta elementos conversacionales y pruébalos al instante para diseñar interacciones atractivas con los clientes.",
+            "chat-desc-2": "Experimenta una plataforma de mensajería moderna que integra sin problemas todo lo esencial para un soporte, ventas y compromiso efectivos, todo dentro de una interfaz fácil de usar.",
+            "chat-btn": "Aprender más",
+            
             "hero-video-title": "Elabora una estrategia de comunicación<br>utilizando chat de video en vivo",
             "hero-video-description": "Las videoconferencias mejoran la productividad y fomentan la colaboración, convirtiéndolas en una herramienta versátil para alcanzar estos objetivos.", 
             

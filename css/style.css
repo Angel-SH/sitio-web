@@ -419,12 +419,17 @@ body::before {
 }
 /* Estilo general del contenedor de contenido */
 .content-chat {
-    display: flex; /* Usamos flexbox para organizar el contenido */
-    justify-content: space-between; /* Espacio entre las secciones */
-    gap: 3rem; /* Espacio entre las secciones */
-    margin-top: 12rem; /* Margen superior para separarlo del contenido anterior */
-    padding-left: 20px; /* Añadimos un pequeño margen a la izquierda para separar el texto del borde */
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Asegura que los elementos estén alineados */
+    flex-wrap: wrap; /* Permite que los elementos se ajusten en pantallas más pequeñas */
+    gap: 2rem; /* Reduce el espacio entre elementos */
+    margin-top: 10rem; /* Ajusta la separación superior */
+    max-width: 1200px; /* Limita el ancho para evitar que se expanda demasiado */
+    margin-left: auto;
+    margin-right: auto;
 }
+
 
 .content1 {
     flex: 1; /* Ocupa el espacio restante disponible */
@@ -486,6 +491,8 @@ h3 {
     justify-content: center; /* Centra la imagen horizontalmente */
     align-items: flex-start; /* Alinea la imagen al principio (puedes cambiar a flex-end o center según prefieras) */
     overflow: hidden; /* Evita que la imagen se desborde fuera del contenedor */
+    margin-top: 90px;
+    overflow: visible; /* Permite que los elementos sobresalgan */
 }
 
 /* Estilo para la imagen dentro de la ventana del chat */
@@ -1036,7 +1043,7 @@ h3 {
  /* Testimonials container */
 .testimonials-section {
     background-color: #ffffff; /* Change this to match your site's background */
-    padding: 60px 0;
+    padding: 160px 0;
     width: 100%;
 }
 
@@ -1452,7 +1459,7 @@ h3 {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 40px;
+    padding: 90px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #ffffff; /* Fondo opaco */
     position: relative;
@@ -1587,7 +1594,7 @@ h3 {
 /* Posicionamiento de los íconos fuera del chat */
 .chat_interfaz_icono_email {
     position: absolute;
-    left: 115px; /* Mueve el ícono de Gmail a la derecha */
+    left: 170px; /* Mueve el ícono de Gmail a la derecha */
     top: 53%; /* Centra el ícono verticalmente */
     transform: translateY(-50%); /* Ajuste para que quede centrado verticalmente */
 }
@@ -1595,8 +1602,8 @@ h3 {
 /* Ícono de llamada (reposicionado fuera del chat) */
 .chat_interfaz_icono_llamada {
     position: absolute;
-    left: 550px; /* Mueve el ícono de Gmail a la derecha */
-    top: 55.6%; /* Centra el ícono verticalmente */
+    left: 570px; /* Mueve el ícono de Gmail a la derecha */
+    top: 55.1%; /* Centra el ícono verticalmente */
     transform: translateY(-50%); /* Ajuste para que quede centrado verticalmente */
 }
 
@@ -1606,7 +1613,7 @@ h3 {
     padding: 20px 0;
     background-color: #ffffff; /* Fondo opaco */
     margin-left: 0; /* Eliminar margen izquierdo */
-    margin-top: -500px; /* Mueve el contenedor hacia arriba */
+    margin-top: -610px; /* Mueve el contenedor hacia arriba */
     transform: translateX(850px); /* Mueve el contenedor más a la derecha */
     overflow: visible; /* Asegura que el contenido no se recorte */
 }
@@ -1614,14 +1621,16 @@ h3 {
 
 
 .chat_interfaz_derecha h1 {
-    font-size: 40px;
-    color: #0a1744;
+    font-family: 'FolitoR', Arial, sans-serif;
+    font-size: 50px;
+    color: #0c102f;
     margin-bottom: 25px;
     line-height: 1.2;
     font-weight: 700;
 }
 
 .chat_interfaz_parrafo {
+    font-family: 'FolitoR', Arial, sans-serif;
     color: #6b7280;
     font-size: 16px;
     line-height: 1.6;
@@ -1639,6 +1648,7 @@ h3 {
     padding: 12px 25px;
     border-radius: 25px;
     text-decoration: none;
+    font-family: 'FolitoR', Arial, sans-serif;
     font-weight: 600;
     font-size: 16px;
     transition: background-color 0.3s ease;
