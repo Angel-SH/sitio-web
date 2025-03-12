@@ -1510,7 +1510,8 @@ h3 {
     width: 100%;
 }
 
-/* Contenido del chat - Aseguramos opacidad completa */
+
+/* Contenido del chat para aseguramos opacidad completa */
 .chat_interfaz_mensajes {
     padding: 20px;
     background-color: #e9f5fc; /* Aseguramos opacidad completa */
