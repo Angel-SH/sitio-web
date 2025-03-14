@@ -1603,7 +1603,7 @@ h3 {
 .chat_interfaz_icono_llamada {
     position: absolute;
     left: 570px; /* Mueve el ícono de Gmail a la derecha */
-    top: 55.1%; /* Centra el ícono verticalmente */
+    top: 54.6%; /* Centra el ícono verticalmente */
     transform: translateY(-50%); /* Ajuste para que quede centrado verticalmente */
 }
 
