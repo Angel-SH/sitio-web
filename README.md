@@ -25,8 +25,7 @@ SITIO-WEB/
 ├── script.js                  # Lógica y animaciones 
 ├── lang.js                    # Traducción de la interfaz
 ```
-## Visualización:
 
-Visualiza la página web con el siguiente enlace:
-
- [https://angel-sh.github.io/sitio-web/](https://angel-sh.github.io/sitio-web/)
+>[!NOTE]
+>#### Visualización del código:
+>#### [https://angel-sh.github.io/sitio-web/](https://angel-sh.github.io/sitio-web/)
